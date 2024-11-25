@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Registration Form</title>
+    <style>
+        body {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 2px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://cdn.britannica.com/51/190751-050-147B93F7/soccer-ball-goal.jpg');
+            
+        }
+
+        .main {
+    
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 500px;
+        }
+
+        .main h2 {
+            color: rgb(153, 0, 255);
+            margin-bottom: 20px;
+            align-content: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: #7f4caf;
+            color: white;
+            cursor: pointer;
+            width: 50%;
+            font-size: 16px;
+        }
+
+        button:hover{
+            transition: ease-in-out 2s;
+            background-color: #4cafa3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2><center>Football Registration Form</center></h2>
+        <form style="width: 100%" action="">
+            <label for="first">Name:</label>
+            <input type="text" id="first" name="first" placeholder="Full Name" required />
+
+          
+
+            <label for="email">Email:</label>
+            <input type="email" pattern="[^ @]*@[^ @]*" placeholder="@gmail.com" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" 
+                   title="Password must contain at least one number, 
+                           one alphabet, one symbol, and be at 
+                           least 8 characters long" placeholder="Must be 8 characters" required />
+
+                          
+
+            <label for="mobile">Contact:</label>
+            <input type="text" id="mobile" name="mobile" maxlength="10" placeholder="9446866903" required />
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">
+                    Male
+                </option>
+                <option value="female">
+                    Female
+                </option>
+                <option value="other">
+                    Other
+                </option>
+            </select>
+
+           <center> <button type="submit">
+                Submit
+            </button></center>
+        </form>
+    </div>
+</body>
+
+</html>
